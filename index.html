@@ -4,187 +4,296 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chart Addict Cat | CCCC</title>
+<title>CCCC | Chart Addict Cat</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#000;
-    color:white;
+font-family:Arial,Helvetica,sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
 }
+
+a{
+text-decoration:none;
+}
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(10px);
+z-index:999;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#f5c542;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+font-weight:bold;
+}
+
+.launchpad-btn{
+background:#f5c542;
+color:#000;
+padding:12px 22px;
+border-radius:999px;
+font-weight:bold;
+}
+
+/* HERO */
 
 .hero{
-    min-height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.75)),
-    url('logo.png');
-
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size:contain;
-    background-color:#000;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:120px;
+padding-bottom:80px;
+position:relative;
 }
 
-.content{
-    max-width:1000px;
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:url('logo.png') center center no-repeat;
+background-size:contain;
+opacity:0.45;
 }
 
-h1{
-    font-size:90px;
-    color:#f4c542;
-    margin-bottom:10px;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
 }
 
-.subtitle{
-    font-size:38px;
-    margin-bottom:15px;
+.hero h1{
+font-size:110px;
+color:#f5c542;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:28px;
+line-height:1.5;
 }
 
 .tagline{
-    font-size:24px;
-    margin-bottom:40px;
+margin-top:20px;
+font-size:34px;
+font-style:italic;
 }
 
-.chain-badge{
-    display:inline-block;
-    background:#6f42c1;
-    padding:12px 24px;
-    border-radius:40px;
-    font-weight:bold;
-    margin-bottom:25px;
-}
+/* BUTTONS */
 
-.contract-title{
-    font-size:26px;
-    margin-bottom:15px;
-}
-
-.ca-box{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
-}
-
-.ca-box input{
-    width:650px;
-    max-width:95%;
-    padding:16px;
-    border:none;
-    border-radius:10px;
-    background:#111;
-    color:#f4c542;
-    font-size:16px;
-    text-align:center;
-}
-
-.ca-box button{
-    background:#f4c542;
-    color:#000;
-    border:none;
-    padding:16px 25px;
-    border-radius:10px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.social-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    margin-top:20px;
+.buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:35px;
 }
 
 .btn{
-    text-decoration:none;
-    padding:18px 35px;
-    border-radius:50px;
-    font-weight:bold;
-    font-size:20px;
-    min-width:220px;
-    transition:0.3s;
+padding:16px 28px;
+border-radius:999px;
+font-weight:bold;
+font-size:18px;
+display:inline-block;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
+transform:translateY(-3px);
 }
 
 .telegram{
-    background:#229ED9;
-    color:white;
+background:#229ED9;
+color:white;
 }
 
 .x{
-    background:#000;
-    color:white;
-    border:2px solid white;
+background:#111;
+border:2px solid white;
+color:white;
 }
 
 .instagram{
-    color:white;
-    background:linear-gradient(
-        45deg,
-        #833AB4,
-        #C13584,
-        #E1306C,
-        #F77737,
-        #FCAF45
-    );
+background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+color:white;
 }
 
 .launchpad{
-    background:#f4c542;
-    color:black;
+background:#f5c542;
+color:black;
 }
 
-.disclaimer{
-    margin-top:40px;
-    color:#ddd;
-    line-height:1.8;
-    font-size:18px;
+.share{
+background:#7c3aed;
+color:white;
 }
 
-.footer{
-    margin-top:30px;
-    color:#999;
-    font-size:15px;
+/* BADGE */
+
+.chain{
+display:inline-block;
+margin-top:25px;
+background:#7c3aed;
+padding:15px 30px;
+border-radius:999px;
+font-weight:bold;
 }
+
+/* CA */
+
+.ca-box{
+margin-top:30px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.ca-address{
+background:#111;
+padding:20px;
+border-radius:12px;
+font-size:18px;
+word-break:break-all;
+border:1px solid #333;
+}
+
+.copy-btn{
+background:#f5c542;
+border:none;
+padding:20px 25px;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+border:1px solid #333;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.card h3{
+color:#f5c542;
+margin-bottom:15px;
+font-size:28px;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:20px;
+color:#f5c542;
+}
+
+.section-text{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:22px;
+line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px 20px;
+text-align:center;
+border-top:1px solid #222;
+background:#050505;
+}
+
+footer p{
+margin:10px 0;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    h1{
-        font-size:60px;
-    }
+.hero h1{
+font-size:60px;
+}
 
-    .subtitle{
-        font-size:26px;
-    }
+.hero h2{
+font-size:38px;
+}
 
-    .tagline{
-        font-size:18px;
-    }
+.hero p{
+font-size:20px;
+}
 
-    .btn{
-        width:100%;
-        min-width:unset;
-    }
+.tagline{
+font-size:24px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero::before{
+background-size:cover;
+opacity:0.25;
+}
 
 }
 
@@ -193,87 +302,86 @@ h1{
 
 <body>
 
+<nav>
+
+<div class="logo">CCCC</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#howtobuy">How To Buy</a>
+<a href="#community">Community</a>
+</div>
+
+<a href="https://www.ponsfamily.com/launchpad/0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA"
+target="_blank"
+class="launchpad-btn">
+Launchpad
+</a>
+
+</nav>
+
 <section class="hero">
 
-<div class="content">
+<div class="hero-content">
 
 <h1>CCCC</h1>
 
-<div class="subtitle">
-Chart Addict Cat
-</div>
+<h2>Chart Addict Cat</h2>
+
+<p>
+Crypto • Coffee • Cigarettes • Charts • Curiosity
+</p>
 
 <div class="tagline">
-☕ Coffee • 🚬 Cigarettes • 📈 Charts • 🐱 Curiosity
+☕ One Coffee • 🚬 One Cigarette • 📈 One More Chart
 </div>
 
-<div class="chain-badge">
-🟣 Built on Robinhood Chain
-</div>
-
-<div class="contract-title">
-Contract Address
+<div class="chain">
+Built On Robinhood Chain
 </div>
 
 <div class="ca-box">
 
-<input
-id="contractAddress"
-type="text"
-readonly
-value="0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA">
+<div class="ca-address" id="contract">
+0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA
+</div>
 
-<button onclick="copyCA()">
-📋 Copy CA
+<button class="copy-btn" onclick="copyCA()">
+Copy CA
 </button>
 
 </div>
 
-<div class="social-buttons">
+<div class="buttons">
 
-<a
-href="https://t.me/ChartAddictCatstyle"
+<a href="https://t.me/ChartAddictCatstyle"
 target="_blank"
 class="btn telegram">
-✈️ Telegram
+Telegram
 </a>
 
-<a
-href="https://x.com/ChartAddictCats"
+<a href="https://x.com/ChartAddictCats"
 target="_blank"
 class="btn x">
-𝕏 Follow on X
+X
 </a>
 
-<a
-href="https://www.instagram.com/chartaddictcat/"
+<a href="https://www.instagram.com/chartaddictcat/"
 target="_blank"
 class="btn instagram">
-📸 Instagram
+Instagram
 </a>
 
-<a
-href="https://www.ponsfamily.com/launchpad/0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA"
+<a href="https://www.ponsfamily.com/launchpad/0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA"
 target="_blank"
 class="btn launchpad">
-🚀 Buy CCCC
+Buy CCCC
 </a>
 
-</div>
-
-<div class="disclaimer">
-
-A fun community experiment.<br>
-No promises. No guarantees.<br>
-Stay curious. ☕📈🐱
-
-</div>
-
-<div class="footer">
-
-Telegram: @ChartAddictCatstyle<br>
-X: @ChartAddictCats<br>
-Instagram: @chartaddictcat
+<button onclick="shareSite()" class="btn share">
+Share Website
+</button>
 
 </div>
 
@@ -281,16 +389,207 @@ Instagram: @chartaddictcat
 
 </section>
 
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About CCCC
+</h2>
+
+<p class="section-text">
+Chart Addict Cat is built around the culture of traders who always check
+one more chart before bed. Coffee in hand, charts on screen and curiosity
+driving every decision. No fake promises, no complicated roadmap, just a
+community enjoying the journey together.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>☕ The Lifestyle</h3>
+<p>
+Coffee in hand.<br>
+Cigarette lit.<br>
+Charts on screen.<br>
+Curiosity never sleeps.
+</p>
+</div>
+
+<div class="card">
+<h3>😺 For The Curious</h3>
+<p>
+For late-night traders,
+meme hunters and dreamers
+who always check one more chart.
+</p>
+</div>
+
+<div class="card">
+<h3>📈 No Fake Promises</h3>
+<p>
+No complicated roadmap.
+No rug.
+No scam.
+Just community and curiosity.
+</p>
+</div>
+
+<div class="card">
+<h3>❤️ Community First</h3>
+<p>
+Cats trade.
+Dogs hold.
+We both win.
+Join the movement.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tokenomics">
+
+<div class="container">
+
+<h2 class="section-title">
+Tokenomics
+</h2>
+
+<p class="section-text">
+
+Token Name: Chart Addict Cat<br><br>
+
+Ticker: CCCC<br><br>
+
+Chain: Robinhood Chain<br><br>
+
+Contract Address:<br>
+0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA
+
+</p>
+
+</div>
+
+</section>
+
+<section id="howtobuy">
+
+<div class="container">
+
+<h2 class="section-title">
+How To Buy
+</h2>
+
+<p class="section-text">
+
+1. Create a Robinhood Chain compatible wallet.<br><br>
+
+2. Fund your wallet.<br><br>
+
+3. Visit the official launchpad.<br><br>
+
+4. Paste the CCCC contract address.<br><br>
+
+5. Join the community and stay curious.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="container">
+
+<h2 class="section-title">
+Community
+</h2>
+
+<p class="section-text">
+
+A fun community experiment.<br><br>
+
+No promises.<br>
+
+No guarantees.<br><br>
+
+Stay curious. ☕ 🚬 📈 😺
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>CCCC | Chart Addict Cat</h2>
+
+<p>
+Crypto • Coffee • Cigarettes • Charts • Curiosity
+</p>
+
+<p>
+Telegram:
+<a href="https://t.me/ChartAddictCatstyle" target="_blank">
+@ChartAddictCatstyle
+</a>
+</p>
+
+<p>
+X:
+<a href="https://x.com/ChartAddictCats" target="_blank">
+@ChartAddictCats
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://www.instagram.com/chartaddictcat/" target="_blank">
+@chartaddictcat
+</a>
+</p>
+
+<p>
+© 2026 CCCC — Stay Curious.
+</p>
+
+</footer>
+
 <script>
 
-function copyCA() {
+function copyCA(){
 
-const copyText =
-document.getElementById("contractAddress");
+const ca="0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA";
 
-navigator.clipboard.writeText(copyText.value);
+navigator.clipboard.writeText(ca);
 
-alert("CCCC Contract Address Copied!");
+alert("Contract Address Copied!");
+
+}
+
+function shareSite(){
+
+if(navigator.share){
+
+navigator.share({
+title:"Chart Addict Cat",
+text:"Crypto • Coffee • Cigarettes • Charts • Curiosity",
+url:window.location.href
+});
+
+}else{
+
+navigator.clipboard.writeText(window.location.href);
+
+alert("Website Link Copied!");
+
+}
 
 }
 
