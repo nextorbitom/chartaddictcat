@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chart Addict Cat | CCCC</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#0f0f0f;
+color:white;
+line-height:1.6;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+url('logo.png');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+h1{
+font-size:4rem;
+color:#f5c242;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:1.5rem;
+margin-bottom:20px;
+}
+
+.tagline{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#f5c242;
+color:black;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+font-size:2.2rem;
+color:#f5c242;
+margin-bottom:25px;
+text-align:center;
+}
+
+.card{
+background:#181818;
+padding:30px;
+border-radius:20px;
+margin-top:20px;
+}
+
+footer{
+background:#111;
+padding:40px;
+text-align:center;
+}
+
+.counter{
+font-size:3rem;
+color:#00ff88;
+font-weight:bold;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.5rem;
+}
+
+.subtitle{
+font-size:1.2rem;
+}
+
+.tagline{
+font-size:1rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>CCCC</h1>
+
+<p class="subtitle">
+Crypto Coffee Cigarette Curious
+</p>
+
+<p class="tagline">
+☕ One Coffee • 🚬 One Cigarette • 📈 One More Chart
+</p>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://t.me/ChartAddictCat"
+target="_blank">
+Telegram
+</a>
+
+<a class="btn"
+href="https://x.com/nextorbitom"
+target="_blank">
+X
+</a>
+
+<a class="btn"
+href="https://www.ponsfamily.com/launchpad/0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA"
+target="_blank">
+Launchpad
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+Built For The Curious
+</h2>
+
+<div class="card">
+
+<p>
+
+Everyone says:
+
+"I'm going to sleep."
+
+Then checks charts again.
+
+CCCC is for chart addicts,
+coffee addicts,
+crypto explorers,
+and curious minds.
+
+No fake promises.
+
+No complicated roadmap.
+
+Just curiosity,
+memes,
+community,
+and one more chart.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Meet Charlie & Duke
+</h2>
+
+<div class="card">
+
+<p>
+
+🐱 Charlie The Cat
+
+Professional chart watcher.
+
+Coffee addict.
+
+Sleeps 3 hours a day.
+
+Refreshes charts 47 times per hour.
+
+</p>
+
+<br>
+
+<p>
+
+🐶 Duke The Dog
+
+Diamond hands.
+
+Loyal holder.
+
+Always optimistic.
+
+Still bullish.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Charts Checked Today
+</h2>
+
+<div class="counter" id="counter">
+9999999
+</div>
+
+</section>
+
+<footer>
+
+<p>
+TG: @ChartAddictCat
+</p>
+
+<p>
+X: @nextorbitom
+</p>
+
+<p>
+$CCCC
+</p>
+
+</footer>
+
+<script>
+
+let counter =
+9999999 +
+Math.floor(Math.random()*1000);
+
+document
+.getElementById("counter")
+.innerText =
+counter.toLocaleString();
+
+</script>
+
+</body>
+</html>
