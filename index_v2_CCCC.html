@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chart Addict Cats & Dogs (CCCC)</title>
+
+<meta name="description" content="Chart Addict Cats & Dogs (CCCC) - Available on Robinhood Chain and Solana. Coffee, Cigarettes, Charts and Curiosity.">
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#000;color:#fff;line-height:1.6}
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),
+url('hero-bg.png');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
+text-align:center;
+}
+.content{max-width:1200px;width:100%}
+h1{font-size:90px;color:#f4c542;margin-bottom:10px;text-shadow:0 0 20px rgba(244,197,66,.5)}
+.tagline{font-size:28px;color:#f4c542;font-weight:bold;margin-bottom:20px}
+.subtitle{font-size:34px;margin-bottom:30px}
+.story{
+max-width:900px;margin:0 auto 35px;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
+padding:30px;border-radius:20px
+}
+.multi{
+display:inline-block;
+padding:12px 24px;
+background:#14F195;
+color:#000;
+border-radius:40px;
+font-weight:bold;
+margin-bottom:30px;
+}
+.chain-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+margin:40px auto;
+max-width:1000px;
+}
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:24px;
+padding:25px;
+}
+.card h3{margin-bottom:15px}
+.address{
+background:#111;
+padding:12px;
+border-radius:10px;
+word-break:break-all;
+color:#f4c542;
+margin:15px 0;
+}
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+margin:6px;
+}
+.yellow{background:#f4c542;color:#000}
+.green{background:#14F195;color:#000}
+.socials{margin-top:25px}
+.section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+.section h2{color:#f4c542;margin-bottom:20px}
+.footer{
+padding:40px 20px;
+text-align:center;
+background:#050505;
+border-top:1px solid #222;
+}
+@media(max-width:768px){
+h1{font-size:58px}
+.subtitle{font-size:24px}
+.tagline{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="content">
+
+<h1>CCCC</h1>
+
+<div class="tagline">
+☕ Coffee • 🚬 Cigarettes • 📈 Charts • 🐱 Curiosity
+</div>
+
+<div class="subtitle">Chart Addict Cats & Dogs</div>
+
+<div class="multi">🌐 Available On Robinhood Chain & Solana</div>
+
+<div class="story">
+<strong>No fake promises.</strong><br><br>
+<strong>No complicated roadmap.</strong><br>
+<strong>No guaranteed profits.</strong><br>
+<strong>No rug pulls.</strong><br>
+<strong>No disappearing developers.</strong><br><br>
+CCCC is a community-driven meme coin for people who drink coffee, stare at charts, chase curiosity and enjoy the community journey.
+<br><br>
+☕ One Coffee<br>
+🚬 One Cigarette<br>
+📈 One More Chart
+</div>
+
+<div class="chain-grid">
+
+<div class="card">
+<h3 style="color:#CCFF00">Robinhood Chain</h3>
+<p>Original CCCC deployment</p>
+<div class="address" id="rhca">0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA</div>
+<a class="btn yellow" href="https://www.ponsfamily.com/launchpad/0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA" target="_blank">🚀 Buy on Robinhood</a>
+<button class="btn yellow" onclick="copyText('rhca')">📋 Copy CA</button>
+</div>
+
+<div class="card">
+<h3 style="color:#14F195">Solana Chain</h3>
+<p>Trade CCCC on Pump.fun</p>
+<div class="address" id="solca">7en5SH2y4AqZuF1bRrzzADSwzrQ6kCrCqkJeeHVVpump</div>
+<a class="btn green" href="https://pump.fun/coin/7en5SH2y4AqZuF1bRrzzADSwzrQ6kCrCqkJeeHVVpump" target="_blank">⚡ Buy on Solana</a>
+<button class="btn green" onclick="copyText('solca')">📋 Copy CA</button>
+</div>
+
+</div>
+
+<div class="socials">
+<a class="btn" style="background:#229ED9;color:#fff" href="https://t.me/ChartAddictCatstyle" target="_blank">Telegram</a>
+<a class="btn" style="background:#000;color:#fff;border:1px solid #fff" href="https://x.com/ChartAddictCats" target="_blank">𝕏 Follow</a>
+<a class="btn" style="background:#C13584;color:#fff" href="https://www.instagram.com/chartaddictcat/" target="_blank">Instagram</a>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>One Community • Multiple Chains</h2>
+<p>
+Cats Trade • Dogs Hold • We Both Win 🐾
+</p>
+<br>
+<p>
+Whether you prefer Robinhood Chain or Solana, the mission remains the same:
+coffee, charts, curiosity and community.
+</p>
+</section>
+
+<section class="section">
+<h2>How To Buy</h2>
+<p>1. Choose Robinhood Chain or Solana.</p>
+<p>2. Fund your wallet.</p>
+<p>3. Purchase CCCC.</p>
+<p>4. Join the Telegram community.</p>
+</section>
+
+<div class="footer">
+Telegram: @ChartAddictCatstyle<br>
+X: @ChartAddictCats<br>
+Instagram: @chartaddictcat<br><br>
+
+Robinhood CA:<br>
+0xeB504a1DB859a83984dd4FA5D314EfEAb6C27CDA<br><br>
+
+Solana CA:<br>
+7en5SH2y4AqZuF1bRrzzADSwzrQ6kCrCqkJeeHVVpump<br><br>
+
+© 2026 Chart Addict Cats & Dogs (CCCC)
+</div>
+
+<script>
+function copyText(id){
+const text=document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+alert("Contract copied!");
+}
+</script>
+
+</body>
+</html>
